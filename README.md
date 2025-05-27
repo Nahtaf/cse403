@@ -7,7 +7,7 @@
 **FCP/CSE/20/1011**
 
 ## 🔗 LinkedIn Profile  
-[Click to view my LinkedIn Profile](linkedin.com/in/fatahan-azeez-215230268)  
+[Click to view my LinkedIn Profile](www.linkedin.com/in/fattahan-taiwo-3531ba253)  
 
 This repository contains files for the CSE403 course, including:
 - A personal README
