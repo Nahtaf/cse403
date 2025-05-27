@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fattahan - Portfolio</title>
+  <style>
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      background: #f7f7f7;
+      color: #222;
+    }
+    header {
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+    }
+    .nav-logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #268aa8;
+      letter-spacing: 2px;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #fd6f00;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      background: linear-gradient(120deg, #e0f7fa 0%, #fff 100%);
+      text-align: center;
+      padding: 3rem 1rem 2rem 1rem;
+    }
+    .hero img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+      border: 4px solid #268aa8;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin: 0.5rem 0 0.2rem 0;
+      color: #0f3642;
+    }
+    .hero h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #fd6f00;
+      margin: 0 0 1.5rem 0;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+      color: #444;
+      font-size: 1.1rem;
+    }
+    .cta-btn {
+      background: #268aa8;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 1rem;
+    }
+    .cta-btn:hover {
+      background: #fd6f00;
+    }
+    section {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      padding: 2rem;
+    }
+    section h2 {
+      color: #268aa8;
+      margin-top: 0;
+    }
+    .skills-list, .services-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 1.5rem 0 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .skills-list li, .services-list li {
+      background: #e0f7fa;
+      color: #0f3642;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .project-card {
+      background: #f7f7f7;
+      border-radius: 10px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+      padding: 1rem;
+      text-align: center;
+      transition: box-shadow 0.2s;
+    }
+    .project-card:hover {
+      box-shadow: 0 4px 16px rgba(38,138,168,0.12);
+    }
+    .project-card img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .project-card h3 {
+      margin: 0.5rem 0 0.2rem 0;
+      color: #0f3642;
+    }
+    .project-card p {
+      font-size: 0.98rem;
+      color: #444;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 400px;
+      margin: 2rem auto 0 auto;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1px solid #268aa8;
+      font-size: 1rem;
+      resize: vertical;
+    }
+    .contact-form button {
+      background: #fd6f00;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 0.8rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .contact-form button:hover {
+      background: #268aa8;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem 1rem 1rem;
+      color: #fff;
+      background: #268aa8;
+      margin-top: 3rem;
+      border-radius: 16px 16px 0 0;
+    }
+    @media (max-width: 600px) {
+      .nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+      }
+      section {
+        padding: 1rem;
+      }
+      .skills-list, .services-list {
+        flex-direction: column;
+        gap: 0.7rem;
+      }
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="nav-logo">Fattahan</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero" id="about">
+    <h2>Hi! I am</h2>
+    <h1>Fattahan</h1>
+    <h2>Product Designer & Software Engineering Student</h2>
+    <p>
+      I blend creativity and technology to design intuitive, impactful digital experiences. Passionate about user-centered design, I thrive on solving problems and building products that matter.
+    </p>
+    <a href="#contact" class="cta-btn">Contact Me</a>
+  </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>UI/UX Design</li>
+      <li>Web Development</li>
+      <li>Brand Identity</li>
+      <li>Mobile App Design</li>
+      <li>Figma</li>
+      <li>HTML/CSS/JS</li>
+      <li>Collaboration</li>
+    </ul>
+  </section>
+  <section id="services">
+    <h2>Services</h2>
+    <ul class="services-list">
+      <li>UI/UX Design for Web & Mobile</li>
+      <li>Responsive Web Design</li>
+      <li>Branding & Logo Design</li>
+      <li>Prototyping & Wireframing</li>
+      <li>Design Systems</li>
+    </ul>
+  </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Personal portfolio website showcasing my design and development work.</p>
+      </div>
+      <div class="project-card">
+        <h3>Brand Identity for Startup</h3>
+        <p>Developed a cohesive brand identity and digital assets for a tech startup.</p>
+      </div>
+      <div class="project-card">
+        <h3>Mobile App UI</h3>
+        <p>Designed a user-friendly mobile app interface for a productivity tool.</p>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  <footer>
+    &copy; 2025 Fattahan. All rights reserved.
+  </footer>
+</body>
+</html>
