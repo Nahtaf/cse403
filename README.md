@@ -1,1 +1,15 @@
-# cse403
+# CSE403 Assignment Repository
+
+## 👤 Full Name  
+**Fatahan Azeez**
+
+## 🆔 Registration Number  
+**FCP/CSE/20/1011**
+
+## 🔗 LinkedIn Profile  
+[Click to view my LinkedIn Profile](linkedin.com/in/fatahan-azeez-215230268)  
+
+This repository contains files for the CSE403 course, including:
+- A personal README
+- My Resume
+- An HTML Portfolio page
