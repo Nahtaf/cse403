@@ -1,7 +1,7 @@
 # CSE403 Assignment Repository
 
 ## 👤 Full Name  
-**Fatahan Azeez**
+**Fattahan Adeiza Taiwo**
 
 ## 🆔 Registration Number  
 **FCP/CSE/20/1011**
